@@ -1,0 +1,53 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(fundo\ menu.jpg);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.autor {
+  font-size: 1.5em;
+  color: rgb(0, 0, 170);
+  margin-bottom: 100px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#menu {
+  text-align: center;
+}
+
+.titulo {
+  color: rgb(238, 194, 0);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+/* Estilo do link como botão */
+#menu a {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.5em;
+  text-decoration: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#menu a:hover {
+  background-color: #218838;
+}

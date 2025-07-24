@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device.width, initial-scale=1.0, user-scalable=no" />
+  <title>Runner 3D</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script async src="https://unpkg.com/es-module-shim@1.6.3/dist/es-module-shim.js"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.158.0/build/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <div id="touchControls">
+    <button id="leftBtn">◀</button>
+    <button id="upBtn">▲</button>
+    <button id="downBtn">▼</button>
+    <button id="rightBtn">▶</button>
+  </div>
+
+  <div id="gameControls">
+    <div id="timer">Tempo: 0s</div>
+    <div id="finishMessage" class="hidden"></div>
+  </div>
+
+  <div id="endMessage" class="hidden">
+    <div class="message-content">
+      <h1>Game Over!</h1> <p><span id="finalTime"></span></p> <button id="restartBtn">🔁 Jogar novamente</button>
+    </div>
+  </div>
+
+  <audio id="bg-audio" src="../sons/som ambiente.mp3" loop preload="auto"></audio>
+  <audio id="sound-left" src="../sons/virar.mp3" preload="auto"></audio>
+  <audio id="sound-right" src="../sons/virar.mp3" preload="auto"></audio>
+  <audio id="sound-backward" src="../sons/ré.mp3" preload="auto"></audio>
+  <audio id="sound-forward" src="../sons/acelera.mp3" preload="auto"></audio>
+
+  <script src="../arquivo do jogo/sounds.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

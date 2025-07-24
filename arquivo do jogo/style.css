@@ -1,0 +1,143 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000; /* ajuda a evitar flash branco no fundo */
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Controles touch */
+#touchControls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+  user-select: none;
+}
+
+#touchControls button {
+  width: 60px;
+  height: 60px;
+  font-size: 28px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  touch-action: none;
+}
+
+#touchControls button:active {
+  background-color: rgba(200, 200, 200, 0.9);
+}
+
+/* Esconder controles em telas maiores */
+@media (min-width: 768px) {
+  #touchControls {
+    display: none;
+  }
+}
+
+/* Controles do jogo no topo */
+#gameControls {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#gameControls button,
+#gameControls #timer {
+  pointer-events: auto;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+  color: #000;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+#timer {
+  line-height: 36px;
+}
+
+/* Mensagem final (escondida inicialmente) */
+#endMessage {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+  z-index: 999;
+}
+
+#endMessage.hidden {
+  display: none;
+}
+
+#endMessage .message-content {
+  background: #222;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+#endMessage h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+  color: #0f0;
+}
+
+#endMessage p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+#endMessage button {
+  background: #0f0;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+#endMessage button:hover {
+  background: #0c0;
+}
