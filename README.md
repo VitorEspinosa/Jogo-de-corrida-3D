@@ -1,4 +1,4 @@
-# 🚗 Jogo de Tráfego 🚘
+# 🚗 Runner 3D 🚘
 
 Um jogo simples de tráfego onde o objetivo é **chegar ao final da estrada evitando obstáculos** como **pedras** e **carros mais lentos**.  
 O jogador precisa desviar rapidamente e manter a atenção no caminho!
