@@ -426,3 +426,5 @@ export function finishGameTimer() {
 
 // Começa o cronômetro automaticamente
 startTimer();
+
+
